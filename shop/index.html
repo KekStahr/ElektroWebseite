@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop: Neu-, Lackschaden- &amp; Gebrauchtgeräte, Scholz &amp; Partner Köln-Porz</title>
+  <meta name="description" content="Waschmaschinen, Kühlschränke, Geschirrspüler, Kaffeevollautomaten & mehr, neu, mit Lackschaden oder geprüft gebraucht. Mit Lieferung, Anschluss und Altgerätemitnahme in Köln.">
+  <link rel="canonical" href="https://scholz-hausgeraeteservice.de/shop/">
+  <meta name="theme-color" content="#262a7a">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/shop/style.css">
+</head>
+<body data-page="shop">
+<div id="site-header"></div>
+
+<main>
+  <section class="shop-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="/home/">Home</a> / Shop</nav>
+      <div class="shop-hero__row">
+        <div>
+          <h1>Geräte-Shop</h1>
+          <p>Neu, Lackschaden oder geprüft gebraucht, mit Lieferung &amp; Anschluss aus Köln-Porz.</p>
+        </div>
+        <label class="search"><span data-icon="search"></span><span class="sr-only">Suche</span>
+          <input type="search" id="q" placeholder="Gerät, Marke oder Modell suchen …" autocomplete="off"></label>
+      </div>
+      <div class="cats" id="cats" role="tablist" aria-label="Gerätekategorien"></div>
+    </div>
+  </section>
+
+  <div class="perks container">
+    <span data-icon="truck">Lieferung &amp; Anschluss</span>
+    <span data-icon="leaf">Altgerät-Mitnahme</span>
+    <span data-icon="users">Persönliche Beratung</span>
+    <span data-icon="euro">Preis anfragen, oft günstiger</span>
+  </div>
+
+  <section class="container shop">
+    <aside class="filters" id="filters" aria-label="Filter">
+      <div class="filters__head"><h2>Filter</h2><button class="btn btn--ghost btn--sm" type="button" id="reset">Zurücksetzen</button>
+        <button class="filters__close" type="button" id="filters-close" aria-label="Filter schließen" data-icon="x"></button></div>
+
+      <fieldset><legend>Preisspanne</legend>
+        <div class="range"><label>von<input type="number" id="pmin" min="0" step="10" placeholder="0" inputmode="numeric"></label>
+          <label>bis<input type="number" id="pmax" min="0" step="10" placeholder="∞" inputmode="numeric"></label></div>
+        <div class="quick-price" id="quick-price">
+          <button type="button" data-max="300">bis 300 €</button><button type="button" data-min="300" data-max="700">300–700 €</button><button type="button" data-min="700">ab 700 €</button>
+        </div>
+      </fieldset>
+      <fieldset><legend>Zustand</legend><div class="opts" id="f-condition"></div></fieldset>
+      <fieldset><legend>Marke</legend><div class="opts" id="f-brand"></div></fieldset>
+      <fieldset><legend>Farbe</legend><div class="opts swatches" id="f-color"></div></fieldset>
+      <fieldset><legend>Größe (cm)</legend>
+        <div class="range"><label>max. Höhe<input type="number" id="hmax" min="0" placeholder="z. B. 85" inputmode="numeric"></label>
+          <label>max. Breite<input type="number" id="wmax" min="0" placeholder="z. B. 60" inputmode="numeric"></label></div>
+        <p class="hint">Tipp: Nischenmaß eingeben, wir zeigen nur Geräte, die passen.</p>
+      </fieldset>
+      <button class="btn btn--navy btn--block filters__apply" type="button" id="filters-apply">Ergebnisse anzeigen</button>
+    </aside>
+
+    <div class="results">
+      <div class="toolbar">
+        <button class="btn btn--ghost btn--sm filters-open" type="button" id="filters-open"><span data-icon="sliders"></span> Filter</button>
+        <p id="count" aria-live="polite"></p>
+        <label class="sort">Sortieren:
+          <select id="sort">
+            <option value="empfohlen">Empfohlen</option>
+            <option value="ersparnis">Höchste Ersparnis</option>
+            <option value="preis-auf">Preis aufsteigend</option>
+            <option value="preis-ab">Preis absteigend</option>
+            <option value="neu">Neueste zuerst</option>
+          </select></label>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="product-grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <div class="icon-bubble c-red" data-icon="search"></div>
+        <h3>Ihr Wunschgerät ist nicht dabei?</h3>
+        <p>Kein Problem, wir haben Zugriff auf das komplette Sortiment unserer Partnermarken und besorgen Ihnen fast jedes Gerät. Oft günstiger als online.</p>
+        <a class="btn btn--red" href="/kontakt/?anliegen=preisanfrage">Wunschgerät anfragen</a>
+      </div>
+      <div class="cta-mini">
+        <div><strong>Nicht das Richtige gefunden?</strong> Wir besorgen Ihnen fast jedes Gerät unserer Partnermarken.</div>
+        <a class="btn btn--red btn--sm" href="/kontakt/?anliegen=preisanfrage">Gerät anfragen</a>
+      </div>
+    </div>
+  </section>
+  <div class="filters-backdrop" id="backdrop" hidden></div>
+</main>
+
+<div id="site-footer"></div>
+<script src="/assets/js/main.js"></script>
+<script src="/shop/script.js"></script>
+</body>
+</html>

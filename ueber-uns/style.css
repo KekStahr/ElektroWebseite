@@ -1,0 +1,67 @@
+/* ===== Über uns / Küchenstudio / Standort / Presse ===== */
+.jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; position: relative; z-index: 1; }
+.jump a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--line); text-decoration: none; font-weight: 600; color: var(--navy-900); }
+.jump a:hover { border-color: var(--red); color: var(--red); }
+.jump .ico { width: 18px; height: 18px; color: var(--red); }
+
+.letter { display: grid; grid-template-columns: 320px 1fr; gap: 64px; align-items: start; }
+.owner { position: sticky; top: calc(var(--header-h) + 24px); text-align: center; padding: 32px; border-radius: var(--radius-lg); background: var(--bg-soft); }
+/* Drehender Farbring (Logo-Farben) um alle Fotos: Ring dreht sich, Foto bleibt ruhig */
+.ring { position: relative; border-radius: 50%; padding: 6px; isolation: isolate; }
+.ring::before { content: ""; position: absolute; inset: 0; border-radius: 50%; z-index: -1; background: conic-gradient(var(--yellow) 0 25%, var(--red) 0 50%, var(--blue) 0 75%, var(--green) 0); animation: ring-spin 24s linear infinite; }
+.ring > * { width: 100%; height: 100%; border-radius: 50%; border: 3px solid #fff; object-fit: cover; display: grid; place-items: center; }
+@keyframes ring-spin { to { transform: rotate(360deg); } }
+.owner__photo { width: 172px; height: 172px; margin: 0 auto 18px; }
+/* Hover: dezent vergrößern + weicher Schatten */
+.ring { transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s ease; }
+.ring:hover { transform: scale(1.3); box-shadow: 0 12px 28px rgba(23, 26, 79, .18); }
+.owner strong { display: block; font-size: 1.2rem; color: var(--navy-900); }
+.owner > span { color: var(--muted); font-size: .9rem; }
+.owner blockquote { margin: 18px 0 0; font-size: 1.15rem; font-weight: 700; color: var(--red); line-height: 1.4; }
+.letter__text p { font-size: 1.08rem; }
+.sign { font-family: "Segoe Script", "Brush Script MT", cursive; font-size: 1.8rem !important; color: var(--navy); }
+.facts { list-style: none; padding: 0; margin: 64px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.facts li { padding: 26px; border-radius: var(--radius); background: var(--navy-50); }
+.facts strong { display: block; font-size: 2.4rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+.facts span { color: var(--muted); }
+
+.team { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.tm { display: flex; gap: 18px; align-items: center; padding: 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.tm__photo { width: 92px; height: 92px; flex: none; padding: 4px; }
+.tm__photo > span { background: var(--c, var(--navy)); color: #fff; font-weight: 800; font-size: 1.5rem; }
+.tm__body h3 { margin: 0 0 2px; }
+.tm__role { display: block; font-size: .85rem; font-weight: 700; color: var(--red); margin-bottom: 8px; }
+.tm__body p { margin: 0; color: var(--muted); font-size: .95rem; }
+@media (max-width: 760px) { .team { grid-template-columns: 1fr; } .tm { flex-direction: column; text-align: center; } }
+
+.kitchen-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ks { padding: 28px; border-radius: var(--radius-lg); background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .12); }
+.ks span { font-size: 2rem; font-weight: 800; color: var(--yellow); }
+.ks p { color: #b9bde8; margin: 0; }
+.kitchen-cta { margin-top: 36px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: 24px 28px; border-radius: var(--radius-lg); background: #fff; color: var(--ink); }
+.kitchen-cta p { margin: 0; }
+
+.location { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; }
+.loc-card { margin-top: 24px; padding: 28px; border-radius: var(--radius-lg); border: 1px solid var(--line); }
+.loc-status { font-weight: 700; color: var(--navy-900); }
+.hours { width: 100%; border-collapse: collapse; margin-bottom: 22px; }
+.hours th, .hours td { text-align: left; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+.hours th { font-weight: 600; color: var(--muted); }
+.map { border-radius: var(--radius-lg); overflow: hidden; min-height: 420px; background: linear-gradient(135deg, var(--navy-50), var(--bg-soft)); display: grid; place-items: center; }
+.map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; }
+.map__consent { text-align: center; max-width: 340px; padding: 24px; }
+.map__consent .ico { width: 48px; height: 48px; color: var(--red); margin: 0 auto 12px; }
+.map__consent p { color: var(--muted); font-size: .92rem; }
+
+.press-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 8px; }
+.press-card h3 { font-size: 1.5rem; }
+.press-card__src { font-size: .82rem; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: .06em; }
+.press-note { margin-top: 28px; color: var(--muted); }
+
+@media (max-width: 900px) {
+  .letter, .location { grid-template-columns: 1fr; gap: 32px; }
+  .owner { position: static; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .kitchen-steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) { .kitchen-steps { grid-template-columns: 1fr; } .facts strong { font-size: 1.9rem; } }

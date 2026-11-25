@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt, Scholz &amp; Partner Hausgeräte-Service Köln-Porz</title>
+  <meta name="description" content="Reparatur anfragen, Preis erfragen oder Gerät reservieren: Scholz & Partner, Kaiserstraße 40, 51145 Köln-Porz. Telefon (02203) 540 41.">
+  <link rel="canonical" href="https://scholz-hausgeraeteservice.de/kontakt/">
+  <meta name="theme-color" content="#262a7a">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/kontakt/style.css">
+</head>
+<body data-page="kontakt">
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="/home/">Home</a> / Kontakt</nav>
+      <span class="eyebrow">Kontakt</span>
+      <h1 id="k-title">Wie können wir helfen?</h1>
+      <p>Rufen Sie an, kommen Sie vorbei oder schreiben Sie uns, wir melden uns so schnell wie möglich bei Ihnen.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:48px">
+    <div class="container contact">
+      <form class="form-card" id="form" novalidate>
+        <div id="form-msg" role="status"></div>
+        <div class="topics" id="topics" role="radiogroup" aria-label="Anliegen">
+          <label><input type="radio" name="anliegen" value="reparatur" checked><span data-icon="wrench">Reparatur</span></label>
+          <label><input type="radio" name="anliegen" value="preisanfrage"><span data-icon="euro">Preisanfrage</span></label>
+          <label><input type="radio" name="anliegen" value="reservierung"><span data-icon="check">Reservierung</span></label>
+          <label><input type="radio" name="anliegen" value="beratung"><span data-icon="home">Beratung vor Ort</span></label>
+          <label><input type="radio" name="anliegen" value="kueche"><span data-icon="kitchen">Küchenstudio</span></label>
+          <label><input type="radio" name="anliegen" value="sonstiges"><span data-icon="mail">Sonstiges</span></label>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="name">Name *</label><input id="name" name="name" required autocomplete="name" maxlength="100"></div>
+          <div class="field"><label for="tel">Telefon *</label><input id="tel" name="tel" type="tel" required autocomplete="tel" maxlength="40"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="email">E-Mail</label><input id="email" name="email" type="email" autocomplete="email" maxlength="150"></div>
+          <div class="field"><label for="geraet">Gerät / Produkt</label><input id="geraet" name="geraet" maxlength="200" placeholder="z. B. Waschmaschine Miele"></div>
+        </div>
+        <!-- Nur bei "Reparatur" sichtbar -->
+        <fieldset class="place" id="place">
+          <legend>Wie möchten Sie die Reparatur? *</legend>
+          <div class="place__opts">
+            <label class="place__opt"><input type="radio" name="ort" value="geschaeft">
+              <span class="place__card"><span class="place__ico" data-icon="store"></span>
+                <span class="place__txt"><strong>Ich bringe das Gerät vorbei</strong><small>Kaiserstraße 40, Köln-Porz</small></span>
+                <span class="place__price"><small>Kostenvoranschlag</small><b>25 bis 45 €</b></span></span></label>
+            <label class="place__opt"><input type="radio" name="ort" value="vor-ort">
+              <span class="place__card"><span class="place__ico" data-icon="home"></span>
+                <span class="place__txt"><strong>Techniker kommt zu mir</strong><small>Ideal für Großgeräte</small></span>
+                <span class="place__price"><small>Vor-Ort-Pauschale</small><b>ab 79 €</b></span></span></label>
+          </div>
+          <p class="place__note" data-icon="check">Der Betrag wird bei einer Reparatur durch uns vollständig angerechnet.</p>
+        </fieldset>
+        <div class="field"><label for="nachricht">Ihre Nachricht *</label><textarea id="nachricht" name="nachricht" required maxlength="4000" placeholder="Was ist passiert? Wann passt es Ihnen?"></textarea></div>
+        <div class="field"><label for="rueckruf">Wann dürfen wir Sie zurückrufen?</label>
+          <select id="rueckruf" name="rueckruf"><option>Egal, jederzeit</option><option>Vormittags (9–13 Uhr)</option><option>Nachmittags (14–18 Uhr)</option></select></div>
+        <!-- Honeypot gegen Spam-Bots -->
+        <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <label class="consent"><input type="checkbox" name="datenschutz" required><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. Details finden Sie in der <a href="/datenschutz/">Datenschutzerklärung</a>. *</span></label>
+        <button class="btn btn--red btn--block" type="submit" id="submit">Anfrage senden</button>
+        <p class="form-note">* Pflichtfelder · Ihre Daten werden nicht an Dritte weitergegeben.</p>
+      </form>
+
+      <aside class="contact__side">
+        <a class="ccard ccard--phone" data-phone-card href="tel:+49220354041">
+          <span data-icon="phone"></span><div><small>Am schnellsten</small><strong data-phone-text>(02203) 540 41</strong><em id="k-open"></em></div></a>
+        <a class="ccard" href="mailto:info@scholz-hausgeraeteservice.de"><span data-icon="mail"></span><div><small>E-Mail</small><strong>info@scholz-hausgeraeteservice.de</strong></div></a>
+        <a class="ccard" id="k-route" target="_blank" rel="noopener"><span data-icon="pin"></span><div><small>Besuchen Sie uns</small><strong>Kaiserstraße 40, 51145 Köln-Porz</strong><em>Route planen →</em></div></a>
+        <div class="ccard ccard--hours"><span data-icon="clock"></span><div><small>Öffnungszeiten</small>
+          <table><tr><th>Mo bis Do</th><td>9–13 · 14–18 Uhr</td></tr><tr><th>Fr</th><td>9–13 · 14–17 Uhr</td></tr><tr><th>Sa, So</th><td>geschlossen</td></tr></table></div></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="/assets/js/main.js"></script>
+<script src="/kontakt/script.js"></script>
+</body>
+</html>
